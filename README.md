@@ -12,5 +12,4 @@ A C++ toolchain, `clang` and `CMake` need to be available on the system.
 - [GoogleTest](https://github.com/google/googletest)
 - [{fmt}](https://github.com/fmtlib/fmt)
 - [spdlog](https://github.com/gabime/spdlog)
-- [dotenv-cpp](https://github.com/laserpants/dotenv-cpp)
-- [CL11](https://github.com/CLIUtils/CLI11)
+- [CLI11](https://github.com/CLIUtils/CLI11)
