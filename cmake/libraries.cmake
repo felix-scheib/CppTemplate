@@ -1,26 +1,27 @@
 include(${CMAKE_HOME_DIRECTORY}/cmake/CPM.cmake)
 
 CPMAddPackage(
-  NAME benchmark
-  GIT_TAG v1.9.0
-  GITHUB_REPOSITORY google/benchmark
-  OPTIONS
-   "BENCHMARK_ENABLE_TESTING Off"
-   "BENCHMARK_USE_LIBCXX ON"
+    NAME googletest
+    GIT_TAG v1.15.2
+    GITHUB_REPOSITORY google/googletest
+    OPTIONS
+        "INSTALL_GTEST OFF"
+        "gtest_force_shared_crt ON"
+)
+
+CPMAddPackage(
+    NAME benchmark
+    GIT_TAG v1.9.0
+    GITHUB_REPOSITORY google/benchmark
+    OPTIONS
+        "BENCHMARK_ENABLE_TESTING NO"
+        "HAVE_STD_REGEX ON"
+        "RUN_HAVE_STD_REGEX ON"
 )
 
 if (benchmark_ADDED)
-  set_target_properties(benchmark PROPERTIES CXX_STANDARD ${CMAKE_CXX_STANDARD})
+    set_target_properties(benchmark PROPERTIES CXX_STANDARD ${CMAKE_CXX_STANDARD})
 endif()
-
-CPMAddPackage(
-  NAME googletest
-  GITHUB_REPOSITORY google/googletest
-  GIT_TAG v1.15.2
-  OPTIONS
-      "INSTALL_GTEST OFF"
-      "gtest_force_shared_crt ON"
-)
 
 CPMAddPackage(
     NAME fmt
@@ -39,4 +40,3 @@ CPMAddPackage(
     GIT_TAG v2.4.2
     GITHUB_REPOSITORY CLIUtils/CLI11
 )
-

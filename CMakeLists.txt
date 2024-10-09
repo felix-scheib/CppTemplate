@@ -1,16 +1,20 @@
 cmake_minimum_required(VERSION 3.20)
 project(template CXX)
 
-set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-include(${CMAKE_HOME_DIRECTORY}/cmake/CPM.cmake)
-include(${CMAKE_HOME_DIRECTORY}/cmake/libraries.cmake)
+set(TEST_NAME "${PROJECT_NAME}_test")
+set(BENCHMARK_NAME "${PROJECT_NAME}_bench")
 
-add_library(factorial
-    ${CMAKE_HOME_DIRECTORY}/source/factorial/factorial.h
-    ${CMAKE_HOME_DIRECTORY}/source/factorial/factorial.cpp
-)
+include(cmake/CPM.cmake)
+include(cmake/libraries.cmake)
 
-add_executable(${PROJECT_NAME} source/main.cpp source/main.cpp)
+include(lib/lib.cmake)
 
-target_link_libraries(${PROJECT_NAME} PRIVATE spdlog::spdlog fmt::fmt CLI11::CLI11 factorial)
+include(bin/bin.cmake)
+
+include(bench/bench.cmake)
+include(test/test.cmake)
+
+target_include_directories(${PROJECT_NAME} PRIVATE lib)
