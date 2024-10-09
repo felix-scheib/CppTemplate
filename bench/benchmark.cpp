@@ -1,5 +1,7 @@
 #include <benchmark/benchmark.h>
 
+#include "factorial.h"
+
 static void BM_StringCreation(benchmark::State& state) {
   for (auto _ : state) std::string empty_string;
 }
@@ -12,5 +14,11 @@ static void BM_StringCopy(benchmark::State& state) {
   for (auto _ : state) std::string copy(x);
 }
 BENCHMARK(BM_StringCopy);
+
+// Define another benchmark
+static void BM_Factorial(benchmark::State& state) {
+  for (auto _ : state) factorial(10);
+}
+BENCHMARK(BM_Factorial);
 
 BENCHMARK_MAIN();
