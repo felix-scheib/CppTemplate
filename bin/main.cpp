@@ -9,11 +9,10 @@
 int main(int argc, char **argv) {
   dotenv::init();
 
-  fmt::println("Hello from C++ Template");
+  spdlog::info("Hello from C++ Template!");
+
   fmt::println("FOO={}", std::getenv("FOO"));
   fmt::println("BAR={}", std::getenv("BAR"));
-
-  spdlog::info("Hello from C++ Template!");
 
   CLI::App app;
 

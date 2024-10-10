@@ -21,6 +21,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 -- NOTE: Third party dependency used by this software --
+This software depends on CPM.cmake (MIT License),
+and users must comply to its license: https://raw.githubusercontent.com/cpm-cmake/CPM.cmake/refs/heads/master/LICENSE
+
 This software depends on Benchmark (Apache-2.0 License),
 and users must comply to its license: https://raw.githubusercontent.com/google/benchmark/refs/heads/main/LICENSE
 
