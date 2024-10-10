@@ -16,7 +16,3 @@ include(bin/bin.cmake)
 
 include(bench/bench.cmake)
 include(test/test.cmake)
-
-target_include_directories(${PROJECT_NAME} PRIVATE lib)
-target_include_directories(${BENCHMARK_NAME} PRIVATE lib)
-target_include_directories(${TEST_NAME} PRIVATE lib)
