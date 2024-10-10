@@ -1,7 +1,6 @@
-#include <fmt/core.h>
-// #include <spdlog/spdlog.h>
-
 #include <dotenv.h>
+#include <fmt/core.h>
+#include <spdlog/spdlog.h>
 
 #include <CLI/CLI.hpp>
 
@@ -13,7 +12,8 @@ int main(int argc, char **argv) {
   fmt::println("Hello from C++ Template");
   fmt::println("FOO={}", std::getenv("FOO"));
   fmt::println("BAR={}", std::getenv("BAR"));
-  // spdlog::info("Hello from C++ Template!");
+
+  spdlog::info("Hello from C++ Template!");
 
   CLI::App app;
 

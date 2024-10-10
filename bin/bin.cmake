@@ -4,8 +4,8 @@ add_executable(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME}
     PRIVATE
-    spdlog::spdlog
     fmt::fmt
+    spdlog::spdlog
     CLI11::CLI11
     dotenv
     factorial
