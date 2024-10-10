@@ -40,3 +40,25 @@ CPMAddPackage(
     GIT_TAG v2.4.2
     GITHUB_REPOSITORY CLIUtils/CLI11
 )
+
+CPMAddPackage(
+    NAME dotenv	  
+    URL https://github.com/laserpants/dotenv-cpp/archive/refs/heads/master.zip 
+    DOWNLOAD_ONLY YES
+)	 
+
+if (dotenv_ADDED)
+    set(DOTENV_INCLUDE_DIR ${dotenv_SOURCE_DIR}/include/laserpants/dotenv)
+
+    add_library(dotenv
+        STATIC
+        ${DOTENV_INCLUDE_DIR}/dotenv.h
+    )
+
+    target_include_directories(dotenv
+        INTERFACE
+        ${DOTENV_INCLUDE_DIR}
+    )
+
+    set_target_properties(dotenv PROPERTIES LINKER_LANGUAGE CXX)
+endif()

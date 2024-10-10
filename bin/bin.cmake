@@ -7,5 +7,6 @@ target_link_libraries(${PROJECT_NAME}
     spdlog::spdlog
     fmt::fmt
     CLI11::CLI11
+    dotenv
     factorial
 )

@@ -35,3 +35,6 @@ and users must comply to its license: https://raw.githubusercontent.com/gabime/s
 
 This software depends on the CLI11 (BSD-3-Clause License),
 and users must comply to its license: https://raw.githubusercontent.com/CLIUtils/CLI11/refs/heads/main/LICENSE
+
+This software depends on the dotenv-cpp (BSD-3-Clause License),
+and users must comply to its license: https://raw.githubusercontent.com/laserpants/dotenv-cpp/refs/heads/master/LICENSE

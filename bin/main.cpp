@@ -1,12 +1,18 @@
 #include <fmt/core.h>
 // #include <spdlog/spdlog.h>
 
+#include <dotenv.h>
+
 #include <CLI/CLI.hpp>
 
 #include "factorial.h"
 
 int main(int argc, char **argv) {
-  fmt::print("Hello from C++ Template!\n");
+  dotenv::init();
+
+  fmt::println("Hello from C++ Template");
+  fmt::println("FOO={}", std::getenv("FOO"));
+  fmt::println("BAR={}", std::getenv("BAR"));
   // spdlog::info("Hello from C++ Template!");
 
   CLI::App app;
