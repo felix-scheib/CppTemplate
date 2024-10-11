@@ -7,7 +7,7 @@ add_executable(
 target_link_libraries(
     ${TEST_NAME}
     GTest::gtest_main
-    factorial
+    fibonacci
 )
 
 include(GoogleTest)

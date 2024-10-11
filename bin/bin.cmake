@@ -8,5 +8,5 @@ target_link_libraries(${PROJECT_NAME}
     spdlog::spdlog
     CLI11::CLI11
     dotenv
-    factorial
+    fibonacci
 )

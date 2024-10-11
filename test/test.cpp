@@ -1,10 +1,9 @@
 #include <gtest/gtest.h>
 
-#include "factorial.h"
+#include "fibonacci.h"
 
 TEST(FactorialTest, Factorial) {
-  auto foo = factorial(0);
-  EXPECT_EQ(factorial(0), 1);
-  EXPECT_EQ(factorial(1), 1);
-  EXPECT_EQ(factorial(2), 2);
+  EXPECT_EQ(fibonacci(0), 0);
+  EXPECT_EQ(fibonacci(1), 1);
+  EXPECT_EQ(fibonacci(2), 1);
 }

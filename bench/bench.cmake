@@ -5,5 +5,5 @@ add_executable(
 target_link_libraries(
     ${BENCHMARK_NAME}
     benchmark::benchmark
-    factorial
+    fibonacci
 )

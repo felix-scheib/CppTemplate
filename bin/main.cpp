@@ -4,7 +4,7 @@
 
 #include <CLI/CLI.hpp>
 
-#include "factorial.h"
+#include "fibonacci.h"
 
 int main(int argc, char **argv) {
   dotenv::init();
@@ -18,8 +18,8 @@ int main(int argc, char **argv) {
 
   CLI11_PARSE(app, argc, argv);
 
-  auto result = factorial(10);
-  fmt::print("factorial(10) = {}\n", result);
+  auto result = fibonacci(10);
+  fmt::print("fibonacci(10) = {}\n", result);
 
   return 0;
 }
